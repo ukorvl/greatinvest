@@ -2,7 +2,9 @@ import { CSSProperties, ReactElement } from "react";
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Link } from 'react-router-dom'
+import { useTranslation } from 'react-i18next';
+import { Path } from "../../routing";
 
 /**
  * Header.
@@ -10,8 +12,10 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
  * @returns React component.
  */
 export const Header = (): ReactElement => {
+  const { t } = useTranslation('common', { keyPrefix: 'header' });
+
   return (
-    <Navbar expand="lg" style={headerStyle}>
+    <Navbar expand="lg" style={headerStyle} sticky="top">
       <Container>
         <Navbar.Brand style={{}}>
           <strong className="text-danger">
@@ -22,25 +26,43 @@ export const Header = (): ReactElement => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-              <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.2">
-                Another action
-              </NavDropdown.Item>
-              <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-              <NavDropdown.Divider />
-              <NavDropdown.Item href="#action/3.4">
-                Separated link
-              </NavDropdown.Item>
-            </NavDropdown>
+            {headerConfig.map(({text, link}) => (
+              <Nav.Link
+                key={text}
+                as={Link}
+                to={link}
+              >
+                {t(text)}
+              </Nav.Link>
+            ))}
           </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
   );
 }
+
+/**
+ * Header links configuration.
+ */
+const headerConfig = [
+  {
+    link: Path.root,
+    text: 'company',
+  },
+  {
+    link: Path.root,
+    text: 'expertise',
+  },
+  {
+    link: Path.root,
+    text: 'media',
+  },
+  {
+    link: Path.root,
+    text: 'scheduleMeeting',
+  }
+];
 
 /**
  * Styles.

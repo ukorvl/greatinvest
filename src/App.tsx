@@ -1,5 +1,6 @@
 import { ReactElement, Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Spinner from 'react-bootstrap/Spinner';
 import { Layout } from "./components";
 import { routes } from './routing';
 
@@ -12,7 +13,13 @@ function App(): ReactElement {
   return (
     <BrowserRouter>
       <Layout>
-        <Suspense>
+        <Suspense
+          fallback={
+            <Spinner animation="border" role="status">
+              <span className="visually-hidden">Loading...</span>
+            </Spinner>
+          }
+        >
           <Routes>
             {routes.map(({ path, Component }) => (
               <Route
