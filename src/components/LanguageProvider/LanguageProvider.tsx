@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 /**
  * Language provider.
@@ -6,9 +6,5 @@ import { ReactElement } from "react";
  * @returns React component.
  */
 export const LanguageProvider = (): ReactElement => {
-  return (
-    <div>
-
-    </div>
-  )
+  return <div></div>;
 };

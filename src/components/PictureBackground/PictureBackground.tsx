@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 
 /**
  * Picture background.
@@ -6,9 +6,5 @@ import { ReactElement } from "react";
  * @returns React component.
  */
 export const PictureBackground = (): ReactElement => {
-  return (
-    <div>
-
-    </div>
-  )
+  return <div></div>;
 };

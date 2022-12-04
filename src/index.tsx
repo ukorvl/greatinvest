@@ -5,14 +5,12 @@ import reportWebVitals from './reportWebVitals';
 import './i18n';
 import './styles/index.scss';
 
-const root = createRoot(
-  document.getElementById('root') as HTMLElement
-);
+const root = createRoot(document.getElementById('root') as HTMLElement);
 
 root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want to start measuring performance in your app, pass a function

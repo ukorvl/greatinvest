@@ -1,4 +1,4 @@
-import { ReactElement } from "react";
+import { ReactElement } from 'react';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -11,9 +11,7 @@ import Col from 'react-bootstrap/Col';
 export const Footer = (): ReactElement => {
   return (
     <Container>
-      <Row>
-
-      </Row>
+      <Row></Row>
     </Container>
   );
-}
+};

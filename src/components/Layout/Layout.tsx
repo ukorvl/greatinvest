@@ -8,7 +8,7 @@ import { Header } from '../Header';
  */
 type LayoutProps = {
   children: ReactNode;
-}
+};
 
 /**
  * Layout.
@@ -16,12 +16,12 @@ type LayoutProps = {
  * @param {LayoutProps} props Props.
  * @returns React component.
  */
-export const Layout = ({children}: LayoutProps): ReactElement => {
+export const Layout = ({ children }: LayoutProps): ReactElement => {
   return (
     <Container fluid>
       <Header />
       {children}
       <Footer />
     </Container>
-  )
+  );
 };

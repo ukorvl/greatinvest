@@ -1,7 +1,7 @@
 /**
  * App paths.
  */
- export enum Path {
-    root = '/',
-    any = '*',
+export enum Path {
+  root = '/',
+  any = '*',
 }

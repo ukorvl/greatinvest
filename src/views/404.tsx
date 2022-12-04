@@ -6,11 +6,7 @@ import { ReactElement } from 'react';
  * @returns React component.
  */
 const View404 = (): ReactElement => {
-  return (
-    <div>
-  
-    </div>
-  )
+  return <div></div>;
 };
 
 export default View404;
