@@ -11,6 +11,7 @@ import styles from './MainContent.module.scss';
  * @returns React component.
  */
 export const MainContent = (): ReactElement => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const { t } = useTranslation('main', { keyPrefix: 'content' });
 
   return (
