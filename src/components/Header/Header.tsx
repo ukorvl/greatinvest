@@ -9,6 +9,7 @@ import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Path } from '../../routing';
 import { LanguageSwitcher } from '../LanguageProvider';
+import styles from './Header.module.scss';
 
 /**
  * Header.
@@ -21,8 +22,8 @@ export const Header = (): ReactElement => {
   return (
     <Navbar
       expand="lg"
+      className={styles.header}
       style={headerStyle}
-      sticky="top"
       variant="dark"
       bg="dark"
     >
