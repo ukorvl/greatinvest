@@ -1,25 +1,30 @@
+import { ReactElement, Suspense } from 'react';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Layout } from "./components";
+import { routes } from './routing';
+
 /**
  * App.
- * 
+ *
  * @returns React component.
  */
-function App() {
+function App(): ReactElement {
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Layout>
+        <Suspense>
+          <Routes>
+            {routes.map(({ path, Component }) => (
+              <Route
+                key={path}
+                path={path}
+                element={<Component />}
+              />
+            ))}
+          </Routes>
+        </Suspense>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
