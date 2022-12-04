@@ -1,6 +1,7 @@
 import { ReactElement } from 'react';
 import Row from 'react-bootstrap/Row';
 import { PictureBackground } from '../components';
+import { MainContent } from '../components/Main/MainContent';
 
 /**
  * Main view.
@@ -11,7 +12,7 @@ const MainView = (): ReactElement => {
   return (
     <Row>
       <PictureBackground />
-      <div style={{ height: '700px', background: 'red' }}></div>
+      <MainContent />
     </Row>
   );
 };
