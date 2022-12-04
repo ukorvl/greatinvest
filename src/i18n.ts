@@ -9,11 +9,11 @@ i18n
   .use(LanguageDetector)
   .use(initReactI18next)
   .init({
-    fallbackLng: 'ru',
+    fallbackLng: 'en-US',
     debug: false,
     interpolation: {
       escapeValue: false, // not needed for react as it escapes by default
-    }
+    },
   });
 
 export default i18n;
