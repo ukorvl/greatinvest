@@ -1,4 +1,4 @@
-@import "../../styles/variables.scss";
+@import "../../../styles/variables.scss";
 
 $transition: 0.6s all ease-out;
 
@@ -38,9 +38,9 @@ $transition: 0.6s all ease-out;
 }
 
 .title {
-  position: absolute;
-  left: 15%;
-  top: 30%;
+  position: fixed;
+  left: 12%;
+  top: 45%;
   z-index: 2;
   display: flex;
   align-items: flex-start;
@@ -49,7 +49,7 @@ $transition: 0.6s all ease-out;
 .letter {
   color: $c-danger;
   font-size: 12rem;
-  line-height: 0.8;
+  line-height: 0.7;
   transition: $transition;
 }
 
