@@ -4,6 +4,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { IconName, IconPrefix } from '@fortawesome/fontawesome-svg-core';
 import Offcanvas from 'react-bootstrap/Offcanvas';
 import { Path } from '../../routing';
 import { LanguageSwitcher } from '../LanguageProvider';
@@ -21,6 +23,8 @@ export const Header = (): ReactElement => {
       expand="lg"
       style={headerStyle}
       sticky="top"
+      variant="dark"
+      bg="dark"
     >
       <Container>
         <Navbar.Brand>
@@ -37,7 +41,7 @@ export const Header = (): ReactElement => {
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="me-auto">
-              {headerConfig.map(({ text, link }) => (
+              {headerLinksConfig.map(({ text, link }) => (
                 <Nav.Link
                   key={text}
                   as={Link}
@@ -46,7 +50,17 @@ export const Header = (): ReactElement => {
                   {t(text)}
                 </Nav.Link>
               ))}
+            </Nav>
+            <Nav>
               <LanguageSwitcher />
+              {headerIconsConfig.map(({ link, icon }) => (
+                <Nav.Link
+                  key={link}
+                  href={link}
+                >
+                  <FontAwesomeIcon icon={icon} />
+                </Nav.Link>
+              ))}
             </Nav>
           </Offcanvas.Body>
         </Navbar.Offcanvas>
@@ -58,7 +72,7 @@ export const Header = (): ReactElement => {
 /**
  * Header links configuration.
  */
-const headerConfig = [
+const headerLinksConfig = [
   {
     link: Path.root,
     text: 'company',
@@ -78,8 +92,25 @@ const headerConfig = [
 ];
 
 /**
+ * Header icons config.
+ */
+const headerIconsConfig: Array<{
+  link: string;
+  icon: [IconPrefix, IconName];
+}> = [
+  {
+    link: '/',
+    icon: ['fab', 'telegram'],
+  },
+  {
+    link: `tel:${process.env.REACT_APP_SITE_PHONE_NUMBER}`,
+    icon: ['fas', 'square-phone'],
+  },
+];
+
+/**
  * Styles.
  */
 const headerStyle = {
-  '--bs-navbar-brand-font-size': '3rem',
+  '--bs-navbar-brand-font-size': '2.5rem',
 } as CSSProperties;

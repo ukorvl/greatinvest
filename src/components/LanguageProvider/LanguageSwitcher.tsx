@@ -20,9 +20,8 @@ export const LanguageSwitcher = (): ReactElement => {
 
   return (
     <>
-      {Object.keys(locales).map((x, i) => (
+      {Object.keys(locales).map(x => (
         <Nav.Link
-          className={i === 0 ? 'ms-3' : ''}
           onClick={() => i18n.changeLanguage(locales[x as keyof typeof locales])}
           key={x}
           active={i18n.language === locales[x as keyof typeof locales]}
