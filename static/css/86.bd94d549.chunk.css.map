@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/86.bd94d549.chunk.css","mappings":"AAAA,4BAEE,kBADA,SACA","sources":["components/Main/MainContent/MainContent.module.scss"],"sourcesContent":[".content {\n  z-index: 4;\n  position: relative;\n}\n"],"names":[],"sourceRoot":""}

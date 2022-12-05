@@ -3,7 +3,8 @@
     "company": "Company",
     "expertise": "Our expertise",
     "media": "Media",
-    "scheduleMeeting": "Schedule meeting"
+    "scheduleMeeting": "Schedule meeting",
+    "offcanvasTitle": "Menu"
   },
   "footer": {
     "disclaimer": "The information on the site is not a public offer."

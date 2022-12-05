@@ -2,5 +2,19 @@
   "title": {
     "first": "the art of",
     "second": "investment"
+  },
+  "content": {
+    "heading": "Our services",
+    "linkText": "Learn more",
+    "0": "We help protect and increase capital",
+    "1": "We minimize investment risks",
+    "2": "We provide high income rates",
+    "3": "Comprehensive approach, high level of expertise and confidentiality",
+    "4": "We provide protection from fraud and financial pyramids"
+  },
+  "mission": {
+    "pictureText": "",
+    "pictureLinkText": "",
+    "motto": "We guarantee confidentiality and best expertise"
   }
 }
