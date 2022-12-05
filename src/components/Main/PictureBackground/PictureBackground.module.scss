@@ -24,15 +24,17 @@ $transition: 0.6s all ease-out;
     transition: $transition;
   }
 
-  &:hover {
-    &::after {
-      filter: grayscale(1) brightness(50%);
-      background-position: right 25% bottom 45%;
-      background-size: 125% contain;
-    }
+  @media (hover: hover) {
+    &:hover {
+      &::after {
+        filter: grayscale(1) brightness(50%);
+        background-position: right 25% bottom 45%;
+        background-size: 125% contain;
+      }
 
-    .text {
-      color: $c-white;
+      .text {
+        color: $c-white;
+      }
     }
   }
 }
