@@ -38,7 +38,7 @@ export const Header = (): ReactElement => {
           placement="end"
         >
           <Offcanvas.Header closeButton>
-            <Offcanvas.Title id="offcanvasLabel">Offcanvas</Offcanvas.Title>
+            <Offcanvas.Title id="offcanvasLabel">{t('offcanvasTitle')}</Offcanvas.Title>
           </Offcanvas.Header>
           <Offcanvas.Body>
             <Nav className="me-auto">
