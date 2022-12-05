@@ -84,7 +84,7 @@ export const MainContent = (): ReactElement => {
           lg={5}
           className="g-0 d-flex align-items-center"
         >
-          <h1 className="display-1 text-bg-danger text-center p-5">{t('mission.motto')}</h1>
+          <h1 className="text-bg-danger text-center py-5">{t('mission.motto')}</h1>
         </Col>
       </Row>
     </Container>
