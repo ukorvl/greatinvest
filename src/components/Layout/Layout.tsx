@@ -20,12 +20,7 @@ export const Layout = ({ children }: LayoutProps): ReactElement => {
   return (
     <>
       <Header />
-      <Container
-        fluid
-        className="pb-4"
-      >
-        {children}
-      </Container>
+      {children}
       <Footer />
     </>
   );

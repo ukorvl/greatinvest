@@ -20,39 +20,41 @@ export const MainContent = (): ReactElement => {
   const { t } = useTranslation('main', { keyPrefix: 'content' });
 
   return (
-    <Container className={`text-bg-light ${styles.content}`}>
-      <h1 className="display-1 text-danger text-center mt-5">{t('heading')}</h1>
-      <Row className="text-center justify-content-center">
-        {featuresConfig.map(({ icon, link }, i) => (
-          <Col
-            xs={12}
-            sm={6}
-            lg={4}
-            key={i}
-          >
-            <Card className="text-bg-dark my-4">
-              <Card.Body>
-                <Card.Title>
-                  <FontAwesomeIcon
-                    size="3x"
-                    icon={icon}
-                  />
-                </Card.Title>
-                <Card.Text>{t(i.toString())}</Card.Text>
-                {link && (
-                  <Card.Link
-                    as={Link}
-                    to={link}
-                  >
-                    {t('linkText')}
-                  </Card.Link>
-                )}
-              </Card.Body>
-            </Card>
-          </Col>
-        ))}
-      </Row>
-    </Container>
+    <>
+      <Container className={`text-bg-light ${styles.content}`}>
+        <h1 className="display-1 text-danger text-center pt-5">{t('heading')}</h1>
+        <Row className="text-center justify-content-center">
+          {featuresConfig.map(({ icon, link }, i) => (
+            <Col
+              xs={12}
+              sm={6}
+              lg={4}
+              key={i}
+            >
+              <Card className="text-bg-dark my-4">
+                <Card.Body>
+                  <Card.Title>
+                    <FontAwesomeIcon
+                      size="3x"
+                      icon={icon}
+                    />
+                  </Card.Title>
+                  <Card.Text>{t(i.toString())}</Card.Text>
+                  {link && (
+                    <Card.Link
+                      as={Link}
+                      to={link}
+                    >
+                      {t('linkText')}
+                    </Card.Link>
+                  )}
+                </Card.Body>
+              </Card>
+            </Col>
+          ))}
+        </Row>
+      </Container>
+    </>
   );
 };
 

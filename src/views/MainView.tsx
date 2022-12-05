@@ -10,10 +10,10 @@ import { MainContent } from '../components/Main/MainContent';
  */
 const MainView = (): ReactElement => {
   return (
-    <Row>
+    <>
       <PictureBackground />
       <MainContent />
-    </Row>
+    </>
   );
 };
 
