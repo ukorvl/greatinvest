@@ -1,5 +1,4 @@
 import { ReactElement, ReactNode } from 'react';
-import Container from 'react-bootstrap/Container';
 import { Footer } from '../Footer';
 import { Header } from '../Header';
 

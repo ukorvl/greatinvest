@@ -1,5 +1,4 @@
 import { ReactElement } from 'react';
-import Row from 'react-bootstrap/Row';
 import { PictureBackground } from '../components';
 import { MainContent } from '../components/Main/MainContent';
 
