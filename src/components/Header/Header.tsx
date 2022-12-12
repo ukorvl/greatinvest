@@ -100,7 +100,7 @@ const headerIconsConfig: Array<{
   icon: [IconPrefix, IconName];
 }> = [
   {
-    link: '/',
+    link: `https://telegram.me/${process.env.REACT_APP_TELEGRAM}`,
     icon: ['fab', 'telegram'],
   },
   {
