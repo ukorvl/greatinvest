@@ -1,10 +1,11 @@
 @import "../../../styles/variables.scss";
 
-$transition: 0.6s all ease-out;
+$transition: 0.5s all ease-out;
 
 .bgContainer {
   height: calc(100vh - 86px);
   width: 100%;
+  position: relative;
 
   &::after {
     content: "";
@@ -19,9 +20,14 @@ $transition: 0.6s all ease-out;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 100% contain;
-
     transition: $transition;
+
+    @media only screen and (max-width: 575px) {
+      background-size: 200%;
+      background-attachment: unset;
+      background-position: top;
+      pointer-events: none;
+    }
   }
 
   @media (hover: hover) {
@@ -40,9 +46,9 @@ $transition: 0.6s all ease-out;
 }
 
 .title {
-  position: fixed;
+  position: absolute;
   left: 12%;
-  top: 45%;
+  bottom: 45%;
   z-index: 2;
   display: flex;
   align-items: flex-start;
@@ -52,6 +58,7 @@ $transition: 0.6s all ease-out;
     align-items: center;
     left: 0;
     right: 0;
+    bottom: 10%;
   }
 }
 
